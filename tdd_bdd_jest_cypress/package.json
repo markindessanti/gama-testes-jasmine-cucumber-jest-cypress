@@ -6,7 +6,9 @@
 		"start": "nodemon ./bin/www",
 		"tdd": "npx jest --passWithNoTests",
 		"jest:watch": "npx jest --watchAll",
-		"bdd": "cucumber-js features/*.feature"
+		"bdd": "npx cypress run -b chrome",
+		"bdd:spec": "npx cypress run -b chrome --spec",
+		"cypress:open": "npx cypress open"
 	},
 	"dependencies": {
 		"cookie-parser": "~1.4.4",
@@ -18,6 +20,7 @@
 		"nodemon": "^2.0.4"
 	},
 	"devDependencies": {
+		"cypress": "^4.10.0",
 		"jest": "^26.1.0"
 	}
 }
